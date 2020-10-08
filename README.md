@@ -8,7 +8,7 @@
 - Kinda buggy (Don't change resolution size in game)
 - Very messy typescript
 
-Version 2 Updates:
+### Version 2 Updates (Will make eventually):
 - Time
 - WPM
 - Refactoring Code
