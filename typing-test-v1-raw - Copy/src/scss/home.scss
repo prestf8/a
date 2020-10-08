@@ -1,0 +1,62 @@
+@import "fonts.scss";
+
+%display-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin display-flex($direction, $justify, $align) {
+    display: flex;
+    flex-flow: $direction wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin ffont-size($size, $font) {
+    font-size: $size;
+    font-family: $font, sans-serif;
+}
+
+
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    @extend %display-flex-center;
+    height: 100vh;
+    background-color: #d6d6d6;
+
+}
+
+.main {
+    width: 80%;
+    max-width: 500px;
+    height: 500px;
+    text-align: center;
+    border-radius: 1rem;
+    border: 5px solid black;
+    background-color: #eeeeee;
+    margin: auto;
+    
+    @include display-flex(column, space-around, center);
+}
+
+.main__title {
+    @include ffont-size(2.5rem, 'Open Sans'); 
+}
+
+.main__start-game-button {
+    border-radius: 5px;
+    border: none;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    @include ffont-size(1.2rem, 'Open Sans');
+}
+
+.main__start-game-button:hover {
+    cursor: pointer;
+}

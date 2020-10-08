@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Test (v1)</title>
+    <link href="../stylesheets/game.css" rel="stylesheet" type="text/css"/>
+    <link href="../stylesheets/keyStyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <main class="main">
+        <section class="main__top-section">
+            <div class="main__stats">
+                <p class="main__the-one-and-only">Made By: prestf8</p>
+                <p class="main__char-count">Char Count: <span class="char">0</span></p>
+                <p class="main__acc">Acc: <span class="acc">100</span>%</p>
+                <!-- <p class="main__time">00:00</p> -->
+            </div>
+            <progress class="main__progress" value="0" max="100"> 0% </progress>
+        </section>
+        <section class="main__main-section">
+            <div class="main__text-container">
+                <p class="main__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, placeat 
+                    natus non blanditiis quae iusto vero quam ipsum animi neque, vitae cumque nulla laudantium! Perferendis 
+                    cum soluta architecto dolorum inventore, nulla eius? Labore sed voluptatibus, accusantium eligendi iusto 
+                    excepturi atque impedit similique, incidunt cum maiores nulla mollitia ratione quaerat ipsum.
+                </p>
+            </div>
+            <span class="main__current-position"></span>
+            <div class="main__input-container">
+                <input type="text" class="main__input" />
+                <button class="main__input-restart">
+                    <i class="fas fa-undo"></i>                
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+<script defer src="https://kit.fontawesome.com/3c0d58b00f.js" crossorigin="anonymous"></script>
+<script type="module" defer src="../apps/game.js"></script>
+</html>

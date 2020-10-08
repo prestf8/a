@@ -1,0 +1,143 @@
+@import "fonts.scss";
+
+%display-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin display-flex($direction, $justify, $align) {
+    display: flex;
+    flex-flow: $direction wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin ffont-size($size, $font) {
+    font-size: $size;
+    font-family: $font, sans-serif;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background-color: #d6d6d6;
+}
+
+.main {
+    border: 5px solid black;
+    border-radius: 5px;
+    background-color: #eeeeee;
+
+    width: 80%;
+    max-width: 600px;
+    height: 550px;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.main__top-section {
+    flex: 1;
+    @include display-flex(column, space-around, flex-start);
+}
+
+.main__stats {
+    font-weight: bold;
+    @include display-flex(column, flex-start, flex-start);
+    @include ffont-size(1.2rem, 'Montserrat');
+}
+
+.main__acc, .main__char-count {
+    margin-top: 5px;
+}
+
+.main__progress {
+    width: 100%;
+    margin-top: 1rem;
+    height: 25px;
+}
+
+.main__main-section {
+    flex: 3;
+
+    @include display-flex(column, space-between, space-around);
+}
+
+.main__text-container {
+    width: 100%;
+    word-break: break-word;
+
+}
+
+.main__text {
+    margin-top: 1rem;
+    // line-height: 2.6rem;
+    @include ffont-size(1rem, 'Source Sans Pro');
+    word-break: break-word;
+    // letter-spacing: 1.1rem;
+}
+
+.main__input-container {
+    height: 2rem;
+    display: flex;
+}
+
+.main__input {
+    flex: 8;
+    outline: none;
+}
+
+.main__input-restart {
+    flex:1;
+}
+
+.main__input-restart:hover {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+    .main {
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .main {
+        max-width: 1100px;
+        height: 550px; 
+        padding: 2rem;
+    }
+
+    // .main__title {
+    //     font-size: 2rem;
+    // }
+
+
+    .main__input-container {
+        height: 2.3rem;
+    }
+
+    .main__input {
+        @include ffont-size(1.4rem, 'Open Sans');
+    }
+
+    .main__text {
+        font-size: 1.35rem;
+        line-height: 2.2rem;
+        letter-spacing: 1.15rem;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .main__input-container {
+        height: 2.7rem;
+    }
+}

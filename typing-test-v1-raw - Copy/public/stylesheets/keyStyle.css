@@ -1,0 +1,42 @@
+.main__text {
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.main__text p {
+  display: inline-block;
+  width: 11px;
+  height: 20px;
+}
+
+.key-current {
+  color: white;
+}
+
+.key-wrong {
+  color: white;
+  background-color: salmon;
+}
+
+.main__current-position {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 11px;
+  height: 20px;
+  background-color: lightskyblue;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 1100px) {
+  .main__text p {
+    width: 19px;
+    height: 30px;
+  }
+  .main__current-position {
+    width: 19px;
+    height: 30px;
+  }
+}
